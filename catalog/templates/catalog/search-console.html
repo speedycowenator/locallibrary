@@ -1,0 +1,35 @@
+{% extends "base_generic.html" %}
+
+{% block title %} {{ year }}{% endblock %}
+
+
+
+{% block content %}
+
+  <h1>Search</h1>
+  <form action="{% url 'search_results' %}" method="get">
+
+    <table>
+    	<h3>Title Search</h3>
+    	{{ form.title_search_1 }}
+    </table>
+    <table>
+    	<h3>Text Search</h3>
+    	{{ form.text_search_1 }}
+        {{ form.text_search_2 }}
+        {{ form.text_search_3 }}
+       
+    </table>
+	<table>
+		<h3>Date Range Search</h3>
+    	<h5>{{ form.before_date }} ---Ending Date</h5>
+		<h5>{{ form.after_date }} --- Starting Date</h5>
+	</table>
+
+	<h3></h3>
+	<input type="submit" value="OK">
+  </form>
+
+
+
+{% endblock %}

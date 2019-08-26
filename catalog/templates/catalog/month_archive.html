@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+
+
+{% block content %}
+<h1>{{ month_long }}</h1>
+
+{% for article in article_list %}
+    
+    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+    <a>{{ article.Publication }}</a>
+    <a>{{ article.date_publication|date:"F j, Y" }}</a>
+    <p></p>
+{% endfor %}
+{% endblock %}
