@@ -32,12 +32,12 @@
     <div class="div-block-98">
       <div class="nav-background dark">
         <div>
-          <a href="index.html" class="brand w-nav-brand">
+          <a href="http://www.kdhi.us" class="brand w-nav-brand">
             <h1 class="heading-19">KDHI</h1>
             <div class="text-block">Korea<br>Data <br>History<br>Initiative</div>
           </a>
         </div>
-        <div class="div-block-100"><a href="about.html" class="nav-button light w-button">About</a><a href="analysis.html" class="nav-button light w-button">Research</a><a href="two-koreas-hub.html" class="nav-button light w-button">Korea Central</a><a href="data/data.html" class="nav-button light w-button">Data Tools</a><a href="data/trackers/inter-korean.html" class="nav-button light w-button"> Data Trackers </a><a href="podcasts.html" class="nav-button light w-button">Podcasts</a></div>
+        <div class="div-block-100"><a href="http://www.kdhi.us/about" class="nav-button light w-button">About</a><a href="http://www.kdhi.us/analysis" class="nav-button light w-button">Research</a><a href="http://www.kdhi.us/two-koreas-hub" class="nav-button light w-button">Korea Central</a><a href="http://www.kdhi.us/data/data" class="nav-button light w-button">Data Tools</a><a href="data/trackers/inter-korean" class="nav-button light w-button"> Data Trackers </a><a href="http://www.kdhi.us/podcasts" class="nav-button light w-button">Podcasts</a></div>
       </div>
     </div>
   </div>
@@ -46,11 +46,9 @@
     <div class="nav-container left">
       <div class="sdidenav-container">
       {% block sidebar %}
-          <ul class="sidebar-nav">
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'search' %}">Search</a></li>
-          </ul>
-       {% endblock %}
+        <a href="{% url 'index' %}" class="sidebar-link">Archive Index</a>
+        <a href="{% url 'search' %}" class="sidebar-link">Search</a>
+        {% endblock %}
       </div>
     </div>
     <div class="article-container div-block-192">
